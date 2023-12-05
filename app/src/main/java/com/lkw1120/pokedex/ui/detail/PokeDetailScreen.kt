@@ -17,10 +17,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
@@ -63,9 +62,9 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.lkw1120.pokedex.R
-import com.lkw1120.pokedex.common.Constants
 import com.lkw1120.pokedex.common.Constants.KILOGRAM_FORMAT
 import com.lkw1120.pokedex.common.Constants.METER_FORMAT
+import com.lkw1120.pokedex.common.Constants.PROFILE_URL
 import com.lkw1120.pokedex.ui.component.ErrorScreen
 import com.lkw1120.pokedex.ui.component.LoadingScreen
 import com.lkw1120.pokedex.ui.component.StatItem
@@ -105,9 +104,12 @@ fun PokeDetailScreen (
             val pokeDetail = status.pokeDetail
             val isSaved = status.isSaved
 
+            val scrollState = rememberScrollState()
+
             Column(
                 modifier = Modifier
                     .background(colorResource(id = R.color.gray))
+                    .verticalScroll(scrollState),
             ) {
                 PokeImageScreen(
                     pokeDetail = pokeDetail,
@@ -145,7 +147,7 @@ fun PokeImageScreen (
     val tintColor =
         remember { mutableStateOf(Color(context.getColor(R.color.white))) }
     val source =
-        String.format(Constants.PROFILE_FORMAT, pokeDetail.id)
+        String.format(PROFILE_URL, pokeDetail.id)
 
     val size = configuration.screenWidthDp.dp * 0.5f
 
@@ -286,11 +288,11 @@ fun PokeStatsScreen(
             modifier = Modifier
                 .height(12.dp)
         )
-        LazyRow(
+        Row(
             modifier = Modifier,
             horizontalArrangement = Arrangement.spacedBy(24.dp),
         ) {
-            items(pokeDetail.types) { item ->
+            pokeDetail.types.forEach { item ->
                 TypeItem(
                     item = item
                 )
@@ -371,7 +373,6 @@ fun PokeStatsScreen(
             modifier = Modifier
                 .height(12.dp)
         )
-
         Text(
             modifier = Modifier,
             text = stringResource(id = R.string.stat_base_stat),
@@ -385,17 +386,22 @@ fun PokeStatsScreen(
             modifier = Modifier
                 .height(12.dp)
         )
-        LazyColumn(
+        Column(
             modifier = Modifier
                 .padding(horizontal = 24.dp)
                 .fillMaxWidth()
-                .wrapContentHeight()
+                .wrapContentHeight(),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            items(pokeDetail.stats) { item ->
+            pokeDetail.stats.forEach { item ->
                 StatItem(
                     item = item
                 )
             }
         }
+        Spacer(
+            modifier = Modifier
+                .height(24.dp)
+        )
     }
 }

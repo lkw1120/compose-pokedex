@@ -1,5 +1,6 @@
 package com.lkw1120.pokedex.usecase.mapper
 
+import com.lkw1120.pokedex.common.Constants.POKEMON_URL
 import com.lkw1120.pokedex.datasource.entity.DetailEntity
 import com.lkw1120.pokedex.datasource.entity.PokeEntity
 import com.lkw1120.pokedex.datasource.remote.response.PokeDetailResp
@@ -17,7 +18,9 @@ fun toPokeDetailFromRemote(from: PokeDetailResp): PokeDetail {
         height = from.height,
         name = from.name,
         order = from.order,
-        stats = from.stats.map { stat ->
+        stats = from.stats.sortedBy {
+            it.stat.url.split("/")[6].toInt()
+        }.map { stat ->
             StatInfo(
                 baseStat = stat.baseStat,
                 effort = stat.effort,
@@ -25,7 +28,9 @@ fun toPokeDetailFromRemote(from: PokeDetailResp): PokeDetail {
                 url = stat.stat.url
             )
         },
-        types = from.types.map { type ->
+        types = from.types.sortedBy {
+            it.slot.toInt()
+        }.map { type ->
             TypeInfo(
                 slot = type.slot,
                 name = type.type.name,
@@ -84,6 +89,6 @@ fun toPokeEntityFromPokeDetail(from: PokeDetail): PokeEntity {
     return PokeEntity(
         id = from.id,
         name = from.name,
-        url = "https://pokeapi.co/api/v2/pokemon/${from.id}/"
+        url = String.format(POKEMON_URL,from.id)
     )
 }

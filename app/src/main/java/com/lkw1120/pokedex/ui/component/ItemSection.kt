@@ -42,8 +42,8 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.lkw1120.pokedex.R
-import com.lkw1120.pokedex.common.Constants
 import com.lkw1120.pokedex.common.Constants.ID_FORMAT
+import com.lkw1120.pokedex.common.Constants.PROFILE_URL
 import com.lkw1120.pokedex.common.Constants.STAT_FORMAT
 import com.lkw1120.pokedex.usecase.model.PokeItem
 import com.lkw1120.pokedex.usecase.model.StatInfo
@@ -62,7 +62,7 @@ fun PokemonItem(
 
     val defaultColor = MaterialTheme.colorScheme.secondary.value.toInt()
     val backgroundColor = remember { mutableStateOf(Color(defaultColor)) }
-    val source = String.format(Constants.PROFILE_FORMAT, id)
+    val source = String.format(PROFILE_URL, id)
 
     Card(
         modifier = Modifier
@@ -172,9 +172,11 @@ fun StatItem(
     item: StatInfo
 ) {
 
-    Row(modifier = Modifier
-        .fillMaxWidth()
-        .height(36.dp)
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(36.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             modifier = Modifier.weight(0.25f),
