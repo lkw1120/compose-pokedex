@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FF444444</color>
+    <color name="red">#FFFF0000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- type color -->
+    <color name="type_normal">#FFA8A77A</color>
+    <color name="type_fire">#FFEE8130</color>
+    <color name="type_water">#FF6390F0</color>
+    <color name="type_electric">#FFF7D02C</color>
+    <color name="type_grass">#FF7AC74C</color>
+    <color name="type_ice">#FF96D9D6</color>
+    <color name="type_fighting">#FFC22E28</color>
+    <color name="type_poison">#FFA33EA1</color>
+    <color name="type_ground">#FFE2BF65</color>
+    <color name="type_flying">#FFA98FF3</color>
+    <color name="type_psychic">#FFF95587</color>
+    <color name="type_bug">#FFA6B91A</color>
+    <color name="type_rock">#FFB6A136</color>
+    <color name="type_ghost">#FF735797</color>
+    <color name="type_dragon">#FF6F35FC</color>
+    <color name="type_dark">#FF705746</color>
+    <color name="type_steel">#FFB7B7CE</color>
+    <color name="type_fairy">#FFD685AD</color>
+
+    <!-- stat color -->
+    <color name="stat_hp">#FFFF0000</color>
+    <color name="stat_attack">#FFF08030</color>
+    <color name="stat_defense">#FFF8D030</color>
+    <color name="stat_special_attack">#FF6890F0</color>
+    <color name="stat_special_defense">#FF78C850</color>
+    <color name="stat_speed">#FFF85888</color>
+</resources>

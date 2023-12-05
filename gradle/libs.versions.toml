@@ -1,0 +1,83 @@
+[versions]
+agp = "8.3.0-alpha16"
+kotlin = "1.9.20"
+coreKtx = "1.12.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.6.2"
+activityCompose = "1.8.1"
+composeBom = "2023.10.01"
+
+palette = "1.0.0"
+navigation = "2.7.5"
+room = "2.6.1"
+paging = "3.2.1"
+
+googleDevtoolsKsp = "1.9.20-1.0.14"
+
+systemuicontroller = "0.28.0"
+pager = "0.20.1"
+
+daggerHilt = "2.48.1"
+hiltNavigation = "1.1.0"
+retrofit = "2.9.0"
+moshi = "1.14.0"
+okhttp = "4.12.0"
+
+glide = "1.0.0-beta01"
+
+timber = "5.0.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-palette = { group = "androidx.palette", name = "palette", version.ref = "palette" }
+
+androidx-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation"}
+androidx-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigation"}
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
+androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging" }
+
+google-accompanist-systemuiciontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "systemuicontroller" }
+google-accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "pager" }
+
+
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHilt" }
+
+squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+squareup-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
+
+squareup-moshi = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshi" }
+squareup-moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+squareup-moshi-kotlin-codegen = {group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
+
+squareup-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+squareup-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+
+glide = { group = "com.github.bumptech.glide", name = "compose", version.ref = "glide" }
+
+timber = {group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+googleDevtoolsKsp = { id = "com.google.devtools.ksp", version.ref = "googleDevtoolsKsp"}
+daggerHilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+
