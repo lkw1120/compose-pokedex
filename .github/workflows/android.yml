@@ -29,17 +29,17 @@ jobs:
     - name: Build debug APK
       run: ./gradlew assembleDebug --stacktrace
 
-    - name: Set Now
+    - name: Set timestamp
       run: |
-        echo "now=v$(date +'%Y.%m.%d.%H%M')" >> "$GITHUB_ENV"
+        echo "TIMESTAMP=v$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_ENV
 
-    - name: Create Release
+    - name: Create release
       id: create_release
       uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: $
+        tag_name: ${{ env.TIMESTAMP }}
         files: |
           app/build/outputs/apk/debug/app-debug.apk
       
