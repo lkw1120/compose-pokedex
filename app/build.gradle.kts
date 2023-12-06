@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.api.BaseVariantOutputImpl
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -7,14 +9,14 @@ plugins {
 
 android {
     namespace = "com.lkw1120.pokedex"
-    compileSdk = 34
+    compileSdk = Config.COMPILE_SDK
 
     defaultConfig {
         applicationId = "com.lkw1120.pokedex"
-        minSdk = 26
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        minSdk = Config.MINIMUM_SDK
+        targetSdk = Config.TARGET_SDK
+        versionCode = Config.VERSION_CODE
+        versionName = Config.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -29,14 +31,22 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            applicationVariants.all {
+                val variant = this
+                variant.outputs
+                    .map { it as BaseVariantOutputImpl }
+                    .forEach { output ->
+                        output.outputFileName = "${Config.APP_NAME}.apk"
+                    }
+            }
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
     buildFeatures {
         compose = true
