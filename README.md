@@ -1,4 +1,4 @@
-[![Deploy](https://github.com/lkw1120/compose-pokedex/actions/workflows/deploy.yml/badge.svg)](https://github.com/lkw1120/compose-pokedex/actions/workflows/deploy.yml)
+[![Android CI](https://github.com/lkw1120/compose-pokedex/actions/workflows/android.yml/badge.svg)](https://github.com/lkw1120/compose-pokedex/actions/workflows/android.yml)
 
 # compose-pokedex
 
