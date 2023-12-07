@@ -223,7 +223,7 @@ fun PokeImageScreen (
                 requestBuilder
                     .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                     .skipMemoryCache(false)
-                    .centerCrop()
+                    .fitCenter()
                     .listener(object : RequestListener<Drawable> {
                         override fun onLoadFailed(
                             e: GlideException?,
