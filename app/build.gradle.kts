@@ -32,12 +32,11 @@ android {
                 "proguard-rules.pro"
             )
             applicationVariants.all {
-                val variant = this
-                variant.outputs
-                    .map { it as BaseVariantOutputImpl }
-                    .forEach { output ->
-                        output.outputFileName = "${Config.APP_NAME}.apk"
+                outputs.forEach { output ->
+                    (output as BaseVariantOutputImpl).apply {
+                        outputFileName = "${rootProject.name}.apk"
                     }
+                }
             }
         }
     }
@@ -52,7 +51,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.5"
+        kotlinCompilerExtensionVersion = "1.5.6"
     }
     packaging {
         resources {
