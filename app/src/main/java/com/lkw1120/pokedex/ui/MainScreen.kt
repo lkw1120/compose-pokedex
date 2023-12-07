@@ -1,8 +1,10 @@
 package com.lkw1120.pokedex.ui
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -18,15 +20,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.rememberPagerState
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.lkw1120.pokedex.R
 import com.lkw1120.pokedex.ui.main.pager.BottomNavBar
 import com.lkw1120.pokedex.ui.main.pager.BottomNavItem
 import com.lkw1120.pokedex.ui.main.pager.PagerScreen
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalPagerApi::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun MainScreen(
     modifier: Modifier = Modifier,
@@ -38,7 +38,11 @@ fun MainScreen(
         BottomNavItem.PokeList,
         BottomNavItem.CatchList
     )
-    val pagerState = rememberPagerState()
+    val pagerState = rememberPagerState(
+        initialPage = 0,
+        initialPageOffsetFraction = 0f,
+        pageCount = { items.size }
+    )
 
     val systemUiController = rememberSystemUiController()
     SideEffect {

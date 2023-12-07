@@ -1,5 +1,6 @@
 package com.lkw1120.pokedex.ui.main.pager
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -11,6 +12,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,9 +25,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.HorizontalPager
-import com.google.accompanist.pager.PagerState
 import com.lkw1120.pokedex.R
 import com.lkw1120.pokedex.ui.main.CatchListScreen
 import com.lkw1120.pokedex.ui.main.CatchListViewModel
@@ -32,7 +32,7 @@ import com.lkw1120.pokedex.ui.main.PokeListScreen
 import com.lkw1120.pokedex.ui.main.PokeListViewModel
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun PagerScreen(
     modifier: Modifier = Modifier,
@@ -48,7 +48,6 @@ fun PagerScreen(
         HorizontalPager(
             modifier = Modifier
                 .fillMaxSize(),
-            count = 2,
             state = pagerState
         ) { page ->
             when (page) {
@@ -65,7 +64,7 @@ fun PagerScreen(
     }
 }
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun BottomNavBar(
     modifier: Modifier = Modifier,
@@ -89,7 +88,7 @@ fun BottomNavBar(
     }
 }
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AddItem(
     modifier: Modifier = Modifier,
