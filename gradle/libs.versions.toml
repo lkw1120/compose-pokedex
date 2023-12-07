@@ -1,6 +1,6 @@
 [versions]
 agp = "8.3.0-alpha16"
-kotlin = "1.9.20"
+kotlin = "1.9.21"
 coreKtx = "1.12.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -16,13 +16,13 @@ paging = "3.2.1"
 
 googleDevtoolsKsp = "1.9.20-1.0.14"
 
-systemuicontroller = "0.28.0"
-pager = "0.20.1"
+systemuicontroller = "0.32.0"
+pager = "0.32.0"
 
-daggerHilt = "2.48.1"
+daggerHilt = "2.49"
 hiltNavigation = "1.1.0"
 retrofit = "2.9.0"
-moshi = "1.14.0"
+moshi = "1.15.0"
 okhttp = "4.12.0"
 
 glide = "1.0.0-beta01"
