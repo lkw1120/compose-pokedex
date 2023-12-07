@@ -80,7 +80,6 @@ dependencies {
     ksp(libs.androidx.room.compiler)
 
     implementation(libs.google.accompanist.systemuiciontroller)
-    implementation(libs.google.accompanist.pager)
 
     implementation(libs.androidx.hilt.navigation)
     implementation(libs.dagger.hilt)
