@@ -149,7 +149,10 @@ fun PokeImageScreen (
     val source =
         String.format(PROFILE_URL, pokeDetail.id)
 
-    val size = configuration.screenWidthDp.dp * 0.5f
+    val width = configuration.screenWidthDp.dp
+    val height = configuration.screenHeightDp.dp
+
+    val imageSize = width * 0.5f
 
     val systemUiController = rememberSystemUiController()
     LaunchedEffect(backgroundColor.value) {
@@ -168,7 +171,8 @@ fun PokeImageScreen (
     ) {
         Box(
             modifier = Modifier
-                .height(270.dp)
+                .fillMaxWidth()
+                .height(height * 0.35f)
                 .background(backgroundColor.value)
         ) {
             CenterAlignedTopAppBar(
@@ -215,8 +219,8 @@ fun PokeImageScreen (
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(24.dp)
-                    .width(size)
-                    .height(size),
+                    .width(imageSize)
+                    .height(imageSize),
                 model = source,
                 contentDescription = null,
             ) { requestBuilder ->
