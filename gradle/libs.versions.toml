@@ -1,5 +1,5 @@
 [versions]
-agp = "8.3.0-alpha16"
+agp = "8.3.0-alpha17"
 kotlin = "1.9.21"
 coreKtx = "1.12.0"
 junit = "4.13.2"
@@ -14,7 +14,7 @@ navigation = "2.7.5"
 room = "2.6.1"
 paging = "3.2.1"
 
-googleDevtoolsKsp = "1.9.20-1.0.14"
+googleDevtoolsKsp = "1.9.21-1.0.15"
 
 systemuicontroller = "0.32.0"
 
