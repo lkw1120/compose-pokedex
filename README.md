@@ -1,3 +1,4 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Android CI](https://github.com/lkw1120/compose-pokedex/actions/workflows/android.yml/badge.svg)](https://github.com/lkw1120/compose-pokedex/actions/workflows/android.yml)
 
 # Pokedex with Compose
@@ -11,6 +12,10 @@ You can build the project with the latest version of Android Studio or download 
 ## Screenshots
 
 ![1209195201876025](https://github.com/lkw1120/compose-pokedex/assets/15232122/b661b53a-6ca5-44cf-b037-3e384897e8f1)
+
+## Design
+
+Original design is from [Pokedex](https://github.com/skydoves/Pokedex) by [skydoves](https://github.com/skydoves)
 
 ## Open API
 
