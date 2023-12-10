@@ -15,11 +15,27 @@ You can build the project with the latest version of Android Studio or download 
 
 ## Design
 
-Original design is from [Pokedex](https://github.com/skydoves/Pokedex) by [skydoves](https://github.com/skydoves)
+Original design is from [Pokedex](https://github.com/skydoves/Pokedex) by [skydoves](https://github.com/skydoves)   
+Icons are designed by [Freepik](https://www.freepik.com/)
 
 ## Open API
 
 Pokedex uses the [PokéAPI](https://pokeapi.co/) to load Pokémon's data on the screens.   
 The PokéAPI is free service and supports data of Pokémon very detail.
 
+## License
+```
+Copyright 2023 lkw1120
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
