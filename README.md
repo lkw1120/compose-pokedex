@@ -11,7 +11,7 @@ You can build the project with the latest version of Android Studio or download 
 
 ## Screenshots
 
-![1209195201876025](https://github.com/lkw1120/compose-pokedex/assets/15232122/b661b53a-6ca5-44cf-b037-3e384897e8f1)
+![screenshots](https://github.com/lkw1120/compose-pokedex/blob/main/assets/images/screenshots.jpg)
 
 ## Design
 
