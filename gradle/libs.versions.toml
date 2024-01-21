@@ -5,7 +5,7 @@ coreKtx = "1.12.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.6.2"
+lifecycleRuntimeKtx = "2.7.0"
 activityCompose = "1.8.2"
 composeBom = "2023.10.01"
 
@@ -14,7 +14,7 @@ navigation = "2.7.6"
 room = "2.6.1"
 paging = "3.2.1"
 
-googleDevtoolsKsp = "1.9.22-1.0.16"
+googleDevtoolsKsp = "1.9.22-1.0.17"
 
 systemuicontroller = "0.32.0"
 
