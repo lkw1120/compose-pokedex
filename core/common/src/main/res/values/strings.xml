@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+
+    <!-- app string -->
+    <string name="error_title">OOOOOOPS!!!</string>
+    <string name="error_reload">Reload</string>
+    <string name="list_is_empty">List is Empty</string>
+
+
+    <!-- stat string -->
+    <string name="stat_height">height</string>
+    <string name="stat_weight">weight</string>
+    <string name="stat_base_stat">Base Stats</string>
+
+    <string name="stat_hp">HP</string>
+    <string name="stat_attack">Attack</string>
+    <string name="stat_defense">Defence</string>
+    <string name="stat_special_attack">Sp.Atk</string>
+    <string name="stat_special_defense">Sp.Def</string>
+    <string name="stat_speed">Speed</string>
+    <string name="stat_total">Total</string>
+</resources>

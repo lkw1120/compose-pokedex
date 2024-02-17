@@ -16,7 +16,7 @@
         android:name=".PokedexApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Pokedex">
             <intent-filter>
