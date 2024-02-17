@@ -61,6 +61,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature:main"))
+    implementation(project(":feature:detail"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -75,26 +77,11 @@ dependencies {
     implementation(libs.androidx.paging.runtime)
     implementation(libs.androidx.paging.compose)
 
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    ksp(libs.androidx.room.compiler)
-
     implementation(libs.google.accompanist.systemuiciontroller)
 
     implementation(libs.androidx.hilt.navigation)
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
-
-    implementation(libs.squareup.retrofit)
-    implementation(libs.squareup.converter.moshi)
-    implementation(libs.squareup.moshi)
-    implementation(libs.squareup.moshi.kotlin)
-    ksp(libs.squareup.moshi.kotlin.codegen)
-
-    implementation(libs.squareup.okhttp)
-    implementation(libs.squareup.logging.interceptor)
-
-    implementation(libs.glide)
 
     implementation(libs.timber)
 
