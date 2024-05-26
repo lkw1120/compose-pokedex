@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.googleDevtoolsKsp)
     alias(libs.plugins.daggerHilt)
+    alias(libs.plugins.composeCompiler)
 }
 
 android {

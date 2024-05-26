@@ -76,6 +76,6 @@ timber = {group = "com.jakewharton.timber", name = "timber", version.ref = "timb
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 googleDevtoolsKsp = { id = "com.google.devtools.ksp", version.ref = "googleDevtoolsKsp"}
 daggerHilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
-
