@@ -14,7 +14,7 @@ navigation = "2.7.7"
 room = "2.6.1"
 paging = "3.3.0"
 
-googleDevtoolsKsp = "1.9.24-1.0.20"
+googleDevtoolsKsp = "2.0.0-1.0.21"
 
 systemuicontroller = "0.34.0"
 
