@@ -18,19 +18,11 @@ class NetworkRepositoryImpl @Inject constructor(
 ): NetworkRepository {
 
     override suspend fun getPokeList(offset: Int): PokeListResp {
-        val response = remoteDataSource.getPokeList(offset)
-        if(response.isSuccessful) {
-            return response.body()?:throw Exception()
-        }
-        else throw Exception(response.errorBody().toString())
+        return remoteDataSource.getPokeList(offset)
     }
 
     override suspend fun getPokeDetail(name: String): PokeDetailResp {
-        val response = remoteDataSource.getPokeDetail(name)
-        if(response.isSuccessful) {
-            return response.body()?:throw Exception()
-        }
-        else throw Exception(response.errorBody().toString())
+        return remoteDataSource.getPokeDetail(name)
     }
 
 }
