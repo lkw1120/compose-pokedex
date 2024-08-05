@@ -18,7 +18,7 @@ googleDevtoolsKsp = "2.0.0-1.0.22"
 
 systemuicontroller = "0.34.0"
 
-daggerHilt = "2.51.1"
+daggerHilt = "2.52"
 hiltNavigation = "1.2.0"
 retrofit = "2.11.0"
 moshi = "1.15.1"
